@@ -1,0 +1,13 @@
+{
+  "name": "brazil-laws-api",
+  "version": "0.0.1",
+  "main": "index.js",
+  "author": "Sandro Motyl",
+  "license": "MIT",
+  "scripts": {
+    "start": "node src/server"
+  },
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}

@@ -1,0 +1,28 @@
+version: "3.7"
+
+services:
+  database:
+    image: postgres
+    container_name: database-brazil-laws-api
+    restart: always
+    ports:
+      - 5432:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=admin123
+      - POSTGRES_DB=brazil-laws-api
+    volumes:
+      - pgdata:/data/postgres
+    network_mode: host
+  app:
+    build: .
+    container_name: brazil-laws-api
+    ports:
+      - 3000:3000
+    volumes:
+      - .:/usr/app
+    network_mode: host
+
+volumes:
+  pgdata:
+    driver: local
