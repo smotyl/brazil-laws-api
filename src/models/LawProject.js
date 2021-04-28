@@ -6,7 +6,6 @@ class LawProject extends Sequelize.Model {
       {
         title: Sequelize.STRING,
         description: Sequelize.STRING,
-        publicEntity: Sequelize.STRING,
         uri: Sequelize.STRING,
       },
       {

@@ -4,10 +4,9 @@ class PublicEntity extends Sequelize.Model {
   static init(sequelize) {
     super.init(
       {
-        name: Sequelize.STRING,
-        initial: Sequelize.STRING,
-        state: Sequelize.STRING,
-        uri: Sequelize.STRING,
+        description: Sequelize.STRING,
+        location: Sequelize.STRING,
+        website_url: Sequelize.STRING,
       },
       {
         sequelize,
