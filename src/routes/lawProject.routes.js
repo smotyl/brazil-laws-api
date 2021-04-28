@@ -1,10 +1,9 @@
 const { Router } = require('express');
+const LawProjectController = require('../controllers/LawProjectController');
 
 const lawProjectRoutes = Router();
 
-lawProjectRoutes.get('/', (request, response) => {
-  return response.status(201).send({ error: null, data: { sandro: 'sandro' } });
-})
+lawProjectRoutes.get('/', LawProjectController.get)
 
 lawProjectRoutes.post('/', (request, response) => {
   const { name, description, uri, publicEntity } = request.body;

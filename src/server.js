@@ -1,11 +1,11 @@
 const express = require('express');
-const { lawProjectRoutes } = require('./routes/lawProject.routes');
+const { publicEntityRoutes } = require('./routes/publicEntity.routes');
 
-// import './database';
+require('./database');
 
 const app = express();
 
 app.use(express.json());
-app.use('/law-projects', lawProjectRoutes);
+app.use('/public-entities', publicEntityRoutes);
 
 app.listen(3000);
