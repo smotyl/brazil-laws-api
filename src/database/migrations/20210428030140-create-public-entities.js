@@ -4,15 +4,16 @@ module.exports = {
   up: async (queryInterface, Sequelize) => {
     return queryInterface.createTable('public_entities', {
       id: {
-        type: Sequelize.STRING,
+        type: Sequelize.INTEGER,
         allowNull: false,
+        autoIncrement: true,
         primaryKey: true,
       },
-      description: {
+      initials: {
         type: Sequelize.STRING,
         allowNull: false,
       },
-      location: {
+      description: {
         type: Sequelize.STRING,
         allowNull: false,
       },
